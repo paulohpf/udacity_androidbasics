@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/placeImage"
+        android:layout_width="match_parent"
+        android:layout_height="216dp"
+        android:src="@drawable/igrejabatistabetel"
+        android:gravity="top"
+        />
+
+    <TextView
+        android:id="@+id/placeName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Igreja Batista Betel"
+        android:layout_margin="6dp"
+        android:textSize="24sp"
+        android:layout_below="@+id/placeImage"/>
+
+    <ImageView
+        android:id="@+id/imageMaps"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="6dp"
+        android:layout_marginLeft="6dp"
+        android:src="@drawable/maps"
+        android:layout_below="@+id/placeName"/>
+
+    <TextView
+        android:id="@+id/placeLocation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:text="Rua Santa Teresinha 1-15 - Jardim Bela Vista, Bauru"
+        android:layout_toRightOf="@id/imageMaps"
+        android:layout_below="@id/placeName"
+        android:textSize="12sp"/>
+
+    <ImageView
+        android:id="@+id/imageSignal"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="6dp"
+        android:layout_marginLeft="6dp"
+        android:src="@drawable/signal"
+        android:layout_below="@+id/imageMaps"/>
+
+    <TextView
+        android:id="@+id/textDescription"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:text="Somos uma igreja vinculada ao Protestantismo Histórico, e ao Movimento de Renovação Espiritual ocorrido nos idos de 1960. Adotamos a Bíblia como nossa única regra de fé e prática e temos por objetivo pregar a Bíblia toda, a todo homem, em todo mundo."
+        android:layout_toRightOf="@id/imageSignal"
+        android:layout_below="@id/placeLocation"
+        android:textSize="12sp"/>
+
+    <ImageView
+        android:id="@+id/imagePhone"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="6dp"
+        android:layout_marginLeft="6dp"
+        android:src="@drawable/phonecall"
+        android:layout_below="@+id/textDescription"/>
+
+    <TextView
+        android:id="@+id/textPhone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:text="(14) 3212-3570"
+        android:layout_toRightOf="@id/imagePhone"
+        android:layout_below="@id/textDescription"
+        android:textSize="12sp"/>
+
+</RelativeLayout>

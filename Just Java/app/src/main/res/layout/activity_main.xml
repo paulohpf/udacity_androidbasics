@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/labelQuantity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="QUANTITY"
+        android:padding="16dp"
+        android:textColor="#636e72"/>
+
+    <LinearLayout
+        android:id="@+id/quantityLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@+id/labelQuantity"
+        >
+
+        <Button
+            android:id="@+id/buttonDecrement"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:text="-"
+            android:padding="8dp"
+            android:onClick="decrementOrder"/>
+
+        <TextView
+            android:id="@+id/quantity_TextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/labelQuantity"
+            android:layout_marginLeft="0dp"
+            android:layout_toRightOf="@+id/price_TextView"
+            android:padding="8dp"
+            android:text="0"
+            android:textColor="#2d3436"
+            android:textSize="16sp" />
+
+        <Button
+            android:id="@+id/buttonIncrement"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_below="@+id/labelQuantity"
+            android:layout_toRightOf="@+id/quantity_TextView"
+            android:text="+"
+            android:padding="8dp"
+            android:onClick="incrementOrder"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/labelPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="PRICE"
+        android:padding="16dp"
+        android:layout_below="@id/quantityLayout"
+        android:textColor="#636e72"/>
+
+    <TextView
+        android:id="@+id/price_TextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/labelPrice"
+        android:text="0"
+        android:padding="16dp"
+        android:textColor="#2d3436"
+        android:textSize="16sp"/>
+
+    <Button
+        android:id="@+id/orderButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/price_TextView"
+        android:padding="16dp"
+        android:text="ORDER"
+        android:onClick="submitOrder"/>
+
+</RelativeLayout>
