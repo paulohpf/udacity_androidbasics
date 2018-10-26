@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/titleApp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:text="Score Keeper"
+        android:textAlignment="center"
+        android:textSize="26sp" />
+
+    <TextView
+        android:id="@+id/teamLeftPointsTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/titleApp"
+        android:layout_marginLeft="20dp"
+        android:text="Score" />
+
+    <TextView
+        android:id="@+id/teamLeftMissesTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/titleApp"
+        android:layout_marginLeft="20dp"
+        android:layout_toRightOf="@+id/teamLeftPointsTitle"
+        android:text="Misses" />
+
+    <TextView
+        android:id="@+id/leftPoints"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/teamLeftPointsTitle"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="20dp"
+        android:padding="15dp"
+        android:text="0"
+        android:textSize="25sp" />
+
+    <TextView
+        android:id="@+id/leftMisses"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/teamLeftMissesTitle"
+        android:layout_toRightOf="@+id/leftPoints"
+        android:layout_marginLeft="15dp"
+        android:padding="15dp"
+        android:text="0"
+        android:textSize="25sp" />
+
+    <Button
+        android:id="@+id/btnPontoLeft"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/leftPoints"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="20dp"
+        android:onClick="addpointsLeft"
+        android:text="Ponto +1" />
+
+    <Button
+        android:id="@+id/btnFaltaLeft"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btnPontoLeft"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="20dp"
+        android:text="Falta +1"
+        android:onClick="addmissLeft"/>
+
+    <TextView
+        android:id="@+id/teamRightPointsTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/titleApp"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="20dp"
+        android:text="Score" />
+
+    <TextView
+        android:id="@+id/teamRightMissesTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/titleApp"
+        android:layout_toLeftOf="@+id/teamRightPointsTitle"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginRight="20dp"
+        android:text="Misses" />
+
+    <TextView
+        android:id="@+id/rightPoints"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/teamRightPointsTitle"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="20dp"
+        android:padding="15dp"
+        android:textSize="25sp"
+        android:text="0" />
+
+    <TextView
+        android:id="@+id/rightMisses"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/teamRightMissesTitle"
+        android:layout_toLeftOf="@+id/rightPoints"
+        android:layout_marginRight="15dp"
+        android:padding="15dp"
+        android:text="0"
+        android:textSize="25sp" />
+
+    <Button
+        android:id="@+id/btnPontoRight"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rightPoints"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="20dp"
+        android:onClick="addpointsRight"
+        android:text="Ponto +1" />
+
+    <Button
+        android:id="@+id/btnFaltaRight"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btnPontoRight"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="20dp"
+        android:text="Falta +1"
+        android:onClick="addmissRight"/>
+
+    <Button
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerInParent="true"
+        android:text="Reset"
+        android:onClick="resetScore"/>
+
+</RelativeLayout>
